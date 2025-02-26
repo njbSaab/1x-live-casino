@@ -29,6 +29,7 @@
       :image="infoFifa.image"
       :content="infoFifa.content"
     />
+    <span class="line-bottom"></span>
   </div>
 </template>
 

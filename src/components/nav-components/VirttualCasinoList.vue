@@ -9,6 +9,8 @@
       :listDescription="infoData.listDescription"
     />
   </div>
+  <span class="line-bottom"></span>
+
 </template>
 
 <script setup>

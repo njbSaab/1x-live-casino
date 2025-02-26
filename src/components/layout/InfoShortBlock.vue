@@ -1,14 +1,22 @@
 <!-- src/components/InfoBlock.vue -->
 <template>
-  <div class="info-block flex flex-col gap-[20px] text-left">
+  <div
+    class="info-block flex flex-col gap-[20px] md:gap-[26px] bg-transparent text-left py-[20px] elipse"
+  >
     <h2 v-if="title" class="text-2xl font-bold">{{ title }}</h2>
-    <img
-      v-if="image"
-      :src="image"
-      :alt="title"
-      class="w-full object-cover rounded-[10px]"
-    />
-    <p v-if="content" class="text-base text-content">{{ content }}</p>
+    <div class="wrapper flex flex-col md:gap[36px] gap-[25px] md:flex-row">
+      <img
+        v-if="image"
+        :src="image"
+        :alt="title"
+        class="w-full object-cover rounded-[10px]"
+      />
+
+      <p v-if="content" class="text-base text-content md:w-[100%]">{{ content }}</p>
+    </div>
+    <p v-if="contentNext" class="text-base text-content w-full">
+      {{ contentNext }}
+    </p>
   </div>
 </template>
 
@@ -19,6 +27,8 @@ const props = defineProps({
   title: { type: String, required: false },
   image: { type: String, required: false },
   content: { type: String, required: false },
+  contentNext: { type: String, required: false },
+  imageDesktop: { type: String, required: false },
 });
 </script>
 
@@ -38,6 +48,28 @@ const props = defineProps({
     opacity: 0.9;
   }
 }
-
+@media (min-width: 501px) {
+  .info-block {
+    h2 {
+      font-size: 28px;
+      line-height: 1;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .desk {
+    display: block;
+  }
+  .mob {
+    display: none;
+  }
+  .info-block .wrapper{
+    flex-direction: row-reverse;
+    img{
+      
+    }
+  }
+}
 /* Стили для компонента InfoBlock */
 </style>

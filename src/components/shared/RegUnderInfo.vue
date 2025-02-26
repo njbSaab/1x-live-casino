@@ -3,8 +3,8 @@
       <InfoShortBlock
         :content="bonus1.content"
       />
-      <span class="line-bottom"></span>
     </div>
+    <span class="line-bottom"></span>
   </template>
   
   <script setup>

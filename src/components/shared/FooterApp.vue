@@ -1,23 +1,30 @@
 <template>
-  <div class="footer bg-main-b flex flex-col items-center px-[10px] py-[32px] pt-[33px] gap-[32px]">
-    <div class="logo-wrapper flex flex-col gap-[32px] items-center">
-      <img :src="footerData[0].logo" alt="Logo" />
-      <div class="flex gap-[32px] items-center">
-        <img :src="footerData[0].mainP" alt="Main Partners" />
+  <footer class="footer">
+  <div class="container">
+    <div
+      class="footer-wrapper flex flex-col items-center px-[10px] py-[32px] pt-[33px] md:gap-[40px] gap-[32px]"
+    >
+      <div class="logo-wrapper flex flex-col gap-[32px] md:gap-[40px] items-center">
+        <img :src="footerData[0].logo" alt="Logo" />
+        <div class="flex gap-[32px] items-center">
+          <img :src="footerData[0].mainP" alt="Main Partners" />
+        </div>
+      </div>
+      <div class="p-wrapper">
+        <p class="text-sm md:text-lg font-bold pl-[25px] md:pl-[0]">Partners</p>
+        <!-- Один список, в котором для каждого партнёра создаётся элемент списка -->
+        <ul class="p-list">
+          <li v-for="(partner, index) in footerData[0].footerPartners" :key="index">
+            <img :src="partner" alt="Partner logo" class="w-8 h-8" />
+          </li>
+        </ul>
+      </div>
+      <div class="footer-text md:mx-w-[100%]">
+        <p>{{ footerData[0].footerText }}</p>
       </div>
     </div>
-    <div class="p-wrapper">
-      <!-- Один список, в котором для каждого партнёра создаётся элемент списка -->
-      <ul class="p-list">
-        <li v-for="(partner, index) in footerData[0].footerPartners" :key="index">
-          <img :src="partner" alt="Partner logo" class="w-8 h-8" />
-        </li>
-      </ul>
-    </div>
-    <div class="footer-text">
-      <p>{{ footerData[0].footerText }}</p>
-    </div>
   </div>
+</footer>
 </template>
 
 <script setup>
@@ -88,5 +95,30 @@ const footerData = ref([
     opacity: 0.7;
     margin-top: -15px;
   }
+}
+@media screen and (min-width: 768px) {
+.footer {
+  .footer-wrapper {
+    text-align: start;
+    align-items: start;
+  }
+  .logo-wrapper img{
+    width: 200px;
+  }
+  .p-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    img{
+      max-width: 100px;
+    }
+  }
+  .footer-text {
+
+    max-width: 100%;
+    width: 100%;
+
+  }
+}
 }
 </style>

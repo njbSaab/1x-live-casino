@@ -6,6 +6,8 @@
         :content="regData.content"
       />
     </div>
+    <span class="line-bottom"></span>
+
   </template>
   
   <script setup>

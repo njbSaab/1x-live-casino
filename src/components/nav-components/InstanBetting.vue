@@ -1,5 +1,5 @@
 <template>
-  <div class="text-left flex flex-col gap-[20px]">
+  <div class="text-left flex flex-col gap-[20px] pb-[20px]">
     <InfoShortBlock
       :title="infoData.title"
       :image="infoData.image"
@@ -19,6 +19,8 @@
       :content="infoData3.content"
     />
   </div>
+  <span class="line-bottom"></span>
+
 </template>
 
 <script setup>

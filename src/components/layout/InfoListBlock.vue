@@ -1,10 +1,12 @@
 <!-- src/components/InfoBlock.vue -->
 <template>
   <div
-    class="info-block flex flex-col items-center gap-[20px] text-start"
+    class="info-block flex flex-col items-center gap-[20px] text-start py-[20px]"
   >
     <h2 class="text-2xl font-bold">{{ title }}</h2>
-    <img v-if="image" :src="image" :alt="title" class="w-full object-cover rounded-[10px]" />
+    <img v-if="image" :src="image" :alt="title" class="w-full object-cover rounded-[10px] mob" />
+    <img v-if="imageDestop" :src="imageDestop" :alt="title" class="w-full object-cover rounded-[10px] desk" />
+    
     <p class="text-base">{{ content }}</p>
     <ul class="info-list flex flex-col gap-[10px]">
       <li
@@ -41,9 +43,11 @@ import { defineProps } from "vue";
 const props = defineProps({
   title: { type: String, required: true },
   image: { type: String, required: false },
+  imageDestop: { type: String, required: false },
   listItems: { type: Array, required: true },
   content: { type: String, required: true },
   listDescription: { type: String, required: false },
+
 });
 </script>
 
@@ -59,6 +63,17 @@ const props = defineProps({
     font-size: 14px;
     line-height: 1.3;
     color: #ffffff;
+  }
+}
+@media (min-width: 501px) {
+  .info-block {
+    h2 {
+      font-size: 36px;
+      line-height: 1;
+    }
+    p,li {
+      font-size: 16px;
+    }
   }
 }
 

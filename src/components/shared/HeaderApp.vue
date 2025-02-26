@@ -1,26 +1,28 @@
 <template>
   <div class="flex items-center justify-between header">
-    <div class="logo-wrapper mr-[30px]">
-      <img :src="headerData[0].logo" alt="Logo" />
-      <!-- Статический путь работает, но лучше использовать импорт -->
-    </div>
-    <div class="controlls-group flex gap-[12px] items-center">
-      <div class="btn-wrapper">
-        <button class="btn btn-ghost">Registration</button>
+    <div class="header-wrapper flex items-center justify-between">
+      <div class="logo-wrapper mr-[30px]">
+        <img :src="headerData[0].logo" alt="Logo" />
+        <!-- Статический путь работает, но лучше использовать импорт -->
       </div>
-      <div class="lang-wrapper flex items-center h-auto relative w-[45px]">
-        <ul
-          class="flex flex-col items-center"
-          :class="{ 'gap-2, active': isMenuActive }"
-          @click="toggleLang"
-        >
-          <li
-            class="border border-white rounded-full p-0.5"
-            :class="{ active: isMenuActive }"
+      <div class="controlls-group flex gap-[12px] items-center">
+        <div class="btn-wrapper">
+          <button class="btn btn-ghost">Registration</button>
+        </div>
+        <div class="lang-wrapper flex items-center h-auto relative w-[45px]">
+          <ul
+            class="flex flex-col items-center"
+            :class="{ 'gap-2, active': isMenuActive }"
+            @click="toggleLang"
           >
-            <img :src="headerData[0].langs[1]" alt="Language" />
-          </li>
-        </ul>
+            <li
+              class="border border-white rounded-full p-0.5"
+              :class="{ active: isMenuActive }"
+            >
+              <img :src="headerData[0].langs[1]" alt="Language" />
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -52,13 +54,20 @@ const headerData = ref([
 .header {
   background: #141414;
   padding: 22px 20px 22px 19px;
-  ul {
-    margin-left: 6px;
-    padding: 6.5px;
-    background: #313131;
-    border-radius: 12px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  .header-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  .active li {
+  .lang-wrapper {
+    justify-content: flex-end;
+    width: 30px;
   }
+
 }
 </style>

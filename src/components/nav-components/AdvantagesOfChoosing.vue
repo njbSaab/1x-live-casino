@@ -6,21 +6,26 @@
       :content="infoData.content" 
       :listItems="infoData.listItems"
       :image="infoData.image"
+      :imageDestop="infoData.imageDestop"
       :listDescription="infoData.listDescription"
     />
   </div>
+  <span class="line-bottom"></span>
+
 </template>
 
 <script setup>
 import { ref } from "vue";
 import InfoListBlock from "../layout/InfoListBlock.vue"; 
 import image from "../../assets/img/main-n/providers.svg";
+import imageDestop from "../../assets/img/desk/providers.svg";
 
 
 const infoData = ref({
   title: "Преимущества выбора 1xBet",
   content: `В 1xBet мы понимаем важность разнообразия и качества для предоставления первоклассного игрового опыта. Вот почему мы сотрудничаем с самыми известными и инновационными поставщиками игр казино в отрасли. Эти партнерства гарантируют нашим игрокам доступ к огромному выбору игр, характеризующихся передовой графикой, увлекательным игровым процессом и возможностью получения впечатляющих выигрышей. Давайте познакомим вас с некоторыми из ведущих поставщиков игр, поддерживающих наше казино.`,
   image: image,
+  imageDestop: imageDestop,
   listItems: [
     "NetEnt: Пионер в области онлайн-игр, NetEnt славится своими визуально ошеломляющими слотами и инновационной игровой механикой. Такие названия, как «Starburst» и «Gonzo's Quest», стали общеизвестными именами, синонимами качественной игры.",
     "Microgaming: Будучи одной из первых компаний на рынке онлайн-казино, Microgaming предлагает обширное портфолио, включающее некоторые из самых крупных слотов с прогрессивным джекпотом, такие как «Mega Moolah».",

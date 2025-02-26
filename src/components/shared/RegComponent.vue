@@ -16,7 +16,7 @@
 <script setup>
 import { ref } from "vue";
 import RegForm from "../layout/RegForm.vue";
-import image from "../../assets/img/logo.svg";
+import image from "../../assets/img/icons/logo-bl.svg";
 import icon from "../../assets/img/icons/Tested.svg";
 
 const RegData = ref({

@@ -1,6 +1,6 @@
 //Dep.vue
 <template>
-  <div class="flex flex-col gap-[20px] rounded-[10px] text-left">    
+  <div class="flex flex-col gap-[20px] rounded-[10px] text-left pb-[20px]">    
     <InfoListBlock
       :title="infoData.title" 
       :content="infoData.content" 
@@ -9,6 +9,7 @@
       :listDescription="infoData.listDescription"
     />
   </div>
+  <span class="line-bottom"></span>
 </template>
 
 <script setup>

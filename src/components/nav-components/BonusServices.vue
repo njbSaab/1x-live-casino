@@ -47,7 +47,7 @@ import image2 from "../../assets/img/bonus-n/2.png";
 import image3 from "../../assets/img/bonus-n/3.png";
 import image4 from "../../assets/img/bonus-n/4.png";
 import image5 from "../../assets/img/bonus-n/5.png";
-import image6 from "../../assets/img/bonus-n/6.png";
+import image6 from "../../assets/img/desk/earning.png";
 
 const bonus1 = ref({
   image: image,

@@ -1,9 +1,13 @@
 <!-- src/layout/FaqInfo.vue -->
 <template>
+  <div class="container">
+
   <div class="info-block nj-bg-gradient flex flex-col items-start gap-[12px] pt-[23px] pb-[23px] rounded-[6px]  text-white px-[13px] text-left">
     <h2 class="text-2xl font-bold">{{ title }}</h2>
     <p class="text-base">{{ content }}</p>
   </div>
+</div>
+
 </template>
 
 <script setup>

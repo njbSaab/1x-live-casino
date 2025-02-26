@@ -7,8 +7,8 @@
   <div class="nav bg-main px-[18px] py-[45px] relative">
     <NavApp />
   </div>
-
-  <div class="main-wrapper">
+  <div class="bg">
+  <div class="container relative mt-[20px]">
     <!-- reg -->
     <div class="px-[18px] py-[20px]">
       <RegComponent />
@@ -17,95 +17,98 @@
       <RegUnderInfo />
     </div>
     <!-- how-to-start -->
-    <div id="access-your" class="access-to px-[19px] py-[20px] relative">
+    <div id="how-to" class="access-to px-[19px] py-[20px] relative">
       <HowToStart />
     </div>
 
     <!-- list game -->
-    <div id="variety-of-games" class="variety-of-sports px-[19px] py-[20px] relative">
+    <div id="1xbet-casino" class="variety-of-sports px-[19px] py-[20px] relative">
       <VarietyOfGames />
     </div>
 
-    <div id="advantages-of" class="advantages px-[19px] py-[20px] relative">
+    <div id="casino-game" class="advantages px-[19px] py-[20px] relative">
       <AdvantagesOfChoosing />
     </div>
 
     <!-- top slots-->
-    <div id="gambling-on" class="ea-betting px-[19px] py-[20px] relative">
+    <div id="top-slot" class="ea-betting px-[19px] py-[20px] relative">
       <TopSlots />
     </div>
 
     <!-- live deallers-->
-    <div id="exclusive-1xbet" class="bonus-betting px-[19px] py-[20px] relative">
+    <div id="live-dealer" class="bonus-betting px-[19px] py-[20px] relative">
       <LiveDeallers />
     </div>
 
-    <!-- dep list -->
-    <div id="deposit-and" class="dep-list px-[19px] py-[20px] relative">
+    <!-- virtual -->
+    <div id="1xbet-virtual" class="dep-list px-[19px] py-[20px] relative">
       <VirttualCasinoList />
     </div>
 
-    <!-- virtual cas-->
-    <div id="1xbet-virtual" class="virt-casino px-[19px] py-[20px] relative">
+    <!-- instant-betting cas-->
+    <div id="instant-betting" class="virt-casino px-[19px] py-[20px] relative">
       <InstanBetting />
     </div>
 
-    <!-- dep list -->
-    <div id="deposit-and" class="dep-list px-[19px] py-[20px] relative">
+    <!-- 1xbet-unique -->
+    <div id="1xbet-unique" class="dep-list px-[19px] py-[20px] relative">
       <UniqGamesList />
     </div>
+
     <!-- bingo -->
-    <div id="experience-bingo" class="experience-bingo px-[19px] py-[20px] relative">
+    <div id="1xbet-jackpot" class="experience-bingo px-[19px] md:pt-[10px] md:pb-[20px] relative">
       <ExperienceBingo />
     </div>
 
-    <!-- ....... tips-list-->
+    <div id="tips-and" class="tips-list px-[19px] py-[20px]">
+      <TipStrategyList />
+    </div>
 
     <!-- reg -->
     <div class="px-[19px] py-[20px]">
       <RegComponent />
     </div>
 
-    <div id="experience-bingo" class="experience-bingo px-[19px] py-[20px] relative">
+    <div id="casino-bonuses" class="experience-bingo px-[19px] py-[20px] relative">
       <BonusServices />
     </div>
 
-    <div id="deal-with" class="deal-with px-[19px] py-[20px] relative">
+    <div id="casino-tournaments" class="deal-with px-[19px] py-[20px] relative">
       <DealWith />
     </div>
 
-    <div id="experience-bingo" class="experience-bingo px-[19px] py-[20px] relative">
+    <div id="ensuring-user" class="experience-bingo px-[19px] py-[20px] relative">
       <UserSufytty />
     </div>
 
-    <div id="responsible" class="responsible px-[19px] py-[20px] relative">
+    <div id="1xbet-responsible" class="responsible xbet-responsible px-[19px] py-[20px] relative">
       <ResponsibleApp />
     </div>
 
-    <div id="responsible" class="responsible px-[19px] py-[20px] relative">
+    <div id="which-currency" class="responsible px-[19px] pb-[20px] relative">
       <WhichCurrency />
     </div>
 
-    <div id="responsible" class="responsible px-[19px] py-[20px] relative">
+    <div id="responsible" class="responsible px-[19px] relative">
       <DepTerms />
     </div>
 
-    <div id="responsible" class="responsible px-[19px] py-[20px] relative">
+    <div id="using-crypto" class="responsible using-crypto relative">
       <UsingCrypto />
     </div>
 
-    <div id="responsible" class="responsible px-[19px] py-[20px] relative">
+    <div id="beginning-your" class="beginning-your relative">
       <BegginingCs />
     </div>
     <br />
     <!-- reg -->
-    <div class="px-[19px] py-[20px]">
+    <div  id="conclusion" class="px-[19px] py-[20px]">
       <RegComponent />
       <FinalPart />
     </div>
 
   </div>
-
+</div>
   <div id="faq" class="faq-info bg-main relative">
     <FaqInfo />
   </div>
@@ -135,6 +138,7 @@ import DepTerms from "../components/nav-components/DepTerms.vue";
 import UsingCrypto from "../components/nav-components/UsingCrypto.vue";
 import BegginingCs from "../components/nav-components/BegginingCs.vue";
 import FinalPart from "../components/shared/FinalPart.vue";
+import TipStrategyList from "../components/nav-components/TipStrategyList.vue";
 </script>
 
 <style scoped>

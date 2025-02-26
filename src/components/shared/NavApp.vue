@@ -1,4 +1,5 @@
 <template>
+    <div class="container">
   <div class="nav-wrapper flex flex-col items-start gap-[20px] text-start">
     <div class="nav-wrapper">
       <h2 class="text-2xl font-bold">{{ navDate.title }}</h2>
@@ -69,6 +70,8 @@
       </ul>
     </div>
   </div>
+
+  </div>
 </template>
 
 <script setup>
@@ -77,17 +80,25 @@ import { ref } from "vue";
 const navDate = ref({
   title: "Contents",
   listItems: [
-    "Introduction to 1xBet",
-    "Advantages of choosing 1xBet",
-    "Variety of sports betting on 1xBet",
-    "Access your 1xBet account",
-    "Experience Bingo at 1xBet Online Platform",
-    "Deal with Live Dealers at 1xBet Casino",
-    "1xBet Virtual Casino",
-    "Gambling on Cyber Sports at 1xBet",
-    "Exclusive 1xBet Bonus Offers and Deals",
-    "Deposit and Withdrawal for Bettors at 1xBet",
-    "FAQ",
+  "How to Start Playing at 1xBet Casino?",
+  "1xBet Casino Game Selection",
+  "Casino Game Providers on 1xBet",
+  "Top Slot Games at 1xBet",
+  "Live Dealer Games at 1xBet",
+  "1xBet Virtual Casino and Card Games",
+  "Instant Betting Games in 1xbet",
+  "1xbet Unique Casino Games",
+  "1xBet Jackpot",
+  "Tips and Strategies at 1xBet Casino",
+  "Casino Bonuses",
+  "Casino Tournaments at 1xBet",
+  "Ensuring User Safety and Fairness at 1xBet",
+  "1xBet Responsible Gaming",
+  "Which currency choices can be used for casino gaming?",
+  "Using Crypto Payments to Play at 1xBet",
+  "Beginning Your Casino Experience at 1xBet",
+  "Conclusion",
+  "FAQ"
   ],
 });
 
@@ -137,6 +148,26 @@ const generateId = (text) => {
     font-size: 14px;
     line-height: 1.3;
     color: #ffffff;
+  }
+}
+@media (min-width: 501px) {
+  .nav {
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      li {
+        width: 50%;
+      }
+    }
+    p,
+    li {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+
+    }
   }
 }
 </style>

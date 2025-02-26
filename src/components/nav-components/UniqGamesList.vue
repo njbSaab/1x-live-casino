@@ -6,15 +6,19 @@
       :content="infoData.content" 
       :listItems="infoData.listItems"
       :image="infoData.image"
+      :imageDestop="infoData.imageDestop"
       :listDescription="infoData.listDescription"
     />
   </div>
+  <span class="line-bottom"></span>
+
 </template>
 
 <script setup>
 import { ref } from "vue";
 import InfoListBlock from "../layout/InfoListBlock.vue"; 
 import image from "../../assets/img/main-n/virtual-cas.png";
+import imageDestop from "../../assets/img/desk/uniq-cas.png";
 
 
 const infoData = ref({
@@ -29,6 +33,7 @@ const infoData = ref({
 
   ],
     image: image,
+    imageDestop: imageDestop,
     listDescription:`Эти уникальные игры отражают нашу приверженность предоставлению разнообразной и эксклюзивной игровой среды на 1xBet. Присоединяйтесь к нам, чтобы открыть для себя эти и многие другие эксклюзивные названия, которые предлагают не только шанс выиграть, но и незабываемый игровой опыт.`,
 });
 </script>
